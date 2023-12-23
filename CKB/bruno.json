@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "CKB",
+  "type": "collection",
+  "presets": {
+    "requestType": "http",
+    "requestUrl": "{{baseUrl}}"
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: get_tip_block_number
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 42,
+    "jsonrpc": "2.0",
+    "method": "get_tip_block_number",
+    "params": []
+  }
+}
+
+vars:post-response {
+  tipNumber: res("result")
+}
