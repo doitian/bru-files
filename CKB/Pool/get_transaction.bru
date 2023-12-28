@@ -1,0 +1,24 @@
+meta {
+  name: get_transaction
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 42,
+    "jsonrpc": "2.0",
+    "method": "get_transaction",
+    "params": ["0x4bfc89676283f30c350b7586968d73c2de514d6c4555d690e1ab1f6cba3c53b7", "0x1"]
+  }
+}
+
+vars:post-response {
+  tipNumber: res("result")
+}
