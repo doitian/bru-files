@@ -1,0 +1,15 @@
+meta {
+  name: Get all comments
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.todoist.com/rest/v2/comments?task_id=5108339823
+  body: none
+  auth: none
+}
+
+query {
+  task_id: 5108339823
+}
