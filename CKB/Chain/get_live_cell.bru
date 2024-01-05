@@ -1,0 +1,30 @@
+meta {
+  name: get_live_cell
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 42,
+    "jsonrpc": "2.0",
+    "method": "get_live_cell",
+    "params": [
+      {
+        "tx_hash": "0xbe65905ae38972e943874ef67f9d8ff1966dca37959a94be36dc37104ebf0f49",
+        "index": "0x0"
+      },
+      true
+    ]
+  }
+}
+
+vars:post-response {
+  tipNumber: res("result")
+}
