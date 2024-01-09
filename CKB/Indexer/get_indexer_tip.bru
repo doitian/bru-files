@@ -1,0 +1,24 @@
+meta {
+  name: get_indexer_tip
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 42,
+    "jsonrpc": "2.0",
+    "method": "get_indexer_tip",
+    "params": []
+  }
+}
+
+vars:post-response {
+  tipNumber: res("result")
+}
