@@ -5,5 +5,21 @@
   "presets": {
     "requestType": "http",
     "requestUrl": "{{baseUrl}}"
+  },
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "proxy": {
+    "enabled": true,
+    "protocol": "http",
+    "hostname": "192.168.2.6",
+    "port": 7890,
+    "auth": {
+      "enabled": false,
+      "username": "",
+      "password": ""
+    },
+    "bypassProxy": ""
   }
 }
