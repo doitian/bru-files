@@ -1,0 +1,36 @@
+meta {
+  name: Chat Completion (Azure)
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://doitian-chatgpt.openai.azure.com/openai/deployments/gpt-35-turbo-16k/chat/completions?api-version=2024-02-15-preview
+  body: json
+  auth: none
+}
+
+params:query {
+  api-version: 2024-02-15-preview
+}
+
+headers {
+  Content-Type: application/json
+  api-key: c75e29fcd3e749b3907f7118404b29b3
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an AI assistant that helps people find information."
+      }
+    ],
+    "temperature": 0.7,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "top_p": 0.95,
+    "stop": null
+  }
+}

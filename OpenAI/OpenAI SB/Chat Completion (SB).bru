@@ -1,0 +1,29 @@
+meta {
+  name: Chat Completion (SB)
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://api.openai-sb.com/v1/chat/completions
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer sb-15d196351781599331501fcf350cf71b2c0c1e1919b6084d
+}
+
+body:json {
+  {
+    "model": "gpt-3.5-turbo",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "树上有9只鸟，猎人开枪打死1只，树上还剩几只鸟?"
+      }
+    ]
+  }
+}

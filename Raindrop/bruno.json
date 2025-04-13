@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Raindrop",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
