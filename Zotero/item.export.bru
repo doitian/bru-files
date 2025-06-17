@@ -1,0 +1,19 @@
+meta {
+  name: item.export
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:23119/better-bibtex/json-rpc
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "method": "item.export",
+    "params": [["bartoletti2025ScalableUTXO"], "BetterCSLJSON"]
+  }
+}
