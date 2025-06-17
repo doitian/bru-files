@@ -1,0 +1,11 @@
+meta {
+  name: Get active tasks
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://api.todoist.com/rest/v2/tasks
+  body: none
+  auth: inherit
+}
