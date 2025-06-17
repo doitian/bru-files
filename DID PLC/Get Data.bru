@@ -1,0 +1,11 @@
+meta {
+  name: Get Data
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://plc.directory/{{did}}/data
+  body: none
+  auth: inherit
+}

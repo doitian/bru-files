@@ -1,0 +1,15 @@
+meta {
+  name: Get Log
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://plc.directory/{{did}}/log/audit
+  body: none
+  auth: inherit
+}
+
+vars:post-response {
+  genesisOperation: res("[0].operation")
+}

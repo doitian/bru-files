@@ -1,0 +1,11 @@
+meta {
+  name: Get DID
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://plc.directory/{{did}}
+  body: none
+  auth: inherit
+}
